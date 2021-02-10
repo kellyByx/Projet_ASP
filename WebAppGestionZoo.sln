@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppGestionZoo", "WebAppGestionZoo\WebAppGestionZoo.csproj", "{BB21E966-8676-44E1-B921-08C7829D1900}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DBZoo", "DBZoo\DBZoo.sqlproj", "{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB21E966-8676-44E1-B921-08C7829D1900}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB21E966-8676-44E1-B921-08C7829D1900}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB21E966-8676-44E1-B921-08C7829D1900}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB21E966-8676-44E1-B921-08C7829D1900}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FBCC34B0-F6F7-4CFD-9576-3EF567A0BCAA}
+	EndGlobalSection
+EndGlobal
