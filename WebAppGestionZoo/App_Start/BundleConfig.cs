@@ -29,10 +29,27 @@ namespace WebAppGestionZoo
             bundles.Add(new StyleBundle("~/Content/css").Include
                 (
                         "~/Content/bootstrap.css",
-                        "~/css/style.css",
-                        "~/Scripts/jquery-1.11.1.min.js",
-                        "~/Scripts/bootstrap.js"
+                        "~/css/style.css"
+                ));
 
+             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+                      "~/Scripts/jquery-{version}.js"
+                     // "~/Scripts/jquery-1.11.1.min.js"
+                ));
+
+            bundles.Add(new ScriptBundle("~/bundles/jqueryFlexiSel").Include(
+                    "~/js/jquery.flexisel.js"
+                ));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/jquerylightbox").Include(
+               
+                     "~/js/jquery.lightbox.js"
+                ));
+
+            bundles.Add(new StyleBundle("~/Content/css/jqueryLightbox").Include(
+                   "~/css/jquery.lightbox.css"
+                   
                 ));
         }
     }
