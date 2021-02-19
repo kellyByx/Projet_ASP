@@ -2,17 +2,28 @@
 @{
     ViewBag.Title = "Gallery";
 }
-<!--lightbox-->
-@Styles.Render("~/Content/css/jqueryLightbox")
 
-@Scripts.Render("~/bundles/Jquerylightbox")
-<script>
-    // Initiate Lightbox
-    $(function () {
-        $('.gallery a').lightbox();
-    });
-</script>
-<!--lightbox-->
+@section SuiteCss
+{
+    <!--lightbox-->
+    @Styles.Render("~/Content/css/jqueryLightbox")
+}
+
+@section BibilothequeScripts
+{
+    @Scripts.Render("~/bundles/Jquerylightbox")
+}
+
+@section CustomScripts
+{
+    <script>
+        // Initiate Lightbox
+        $(function () {
+            $('.gallery a').lightbox();
+        });
+    </script>
+    <!--lightbox-->
+}
 
 <div class="banner-header">
     <div class="container">

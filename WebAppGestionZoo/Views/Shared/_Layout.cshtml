@@ -9,15 +9,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
     <title>@ViewBag.Title</title>
     @*<title>Zoo Planet a Animals and Pets category Flat bootstrap Responsive  Website Template | Home :: w3layouts</title>*@
-    @Styles.Render("~/Content/css") 
+    @Styles.Render("~/Content/css")
+    @RenderSection("SuiteCss", false)
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Zoo Planet Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
     <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-   
-    @Scripts.Render("~/bundles/jquery")
-    <script src="~/Scripts/bootstrap.js"></script>
+
 </head>
 <body>
     <!--header-->
@@ -46,14 +45,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li class="@ViewBag.About"><a href="/Home/About">About</a></li>
                                 <li class="@ViewBag.Services"><a href="/Home/Services">Services</a></li>
                                 @*<li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery <span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="/Home/Gallery">Gallery1</a></li>
-                                        <li><a href="/Home/Gallery">Gallery2</a></li>
-                                        <li><a href="/Home/Gallery">Gallery3</a></li>
-                                    </ul>
-                                </li>*@
-                                
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="/Home/Gallery">Gallery1</a></li>
+                                            <li><a href="/Home/Gallery">Gallery2</a></li>
+                                            <li><a href="/Home/Gallery">Gallery3</a></li>
+                                        </ul>
+                                    </li>*@
+
                                 <li class="@ViewBag.Gallery"><a href="/Home/Gallery">Gallery</a></li>
                                 <li class="@ViewBag.Contact"><a href="/Home/Contact">Contact</a></li>
                                 <li class="@ViewBag.Connection"><a href="/Home/Connection">Connection</a></li>
@@ -66,8 +65,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
     </div>
-   @RenderBody()
-     <!--specials-->
+    @RenderBody()
+    <!--specials-->
     <div class="specials-section">
         <div class="container">
             <div class="specials-grids">
@@ -119,6 +118,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             </div>
         </div>
     </div>
+    <!-- Mes Script JS -->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/boostrap")
+
+    @RenderSection("BibilothequeScripts", false)
+    @RenderSection("CustomScripts", false)
+
 </body>
 </html>
 

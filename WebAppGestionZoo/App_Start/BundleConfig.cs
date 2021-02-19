@@ -18,6 +18,10 @@ namespace WebAppGestionZoo
                       "~/Scripts/jquery-{version}.js"
                    
                 ));
+            bundles.Add(new ScriptBundle("~/bundles/boostrap").Include(
+                     "~/Scripts/bootstrap.js"
+
+               ));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryFlexiSel").Include(
                     "~/js/jquery.flexisel.js"
