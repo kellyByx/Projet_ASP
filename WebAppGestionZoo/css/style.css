@@ -596,6 +596,10 @@ span.glyphicon.glyphicon-user:hover {
   color: #999;
    line-height: 2em;
  }
+
+.services-grid-bottom{
+    margin-bottom:1vh;
+}
 .services-info {
     border-bottom: 2px solid#a9a685;
     border-left: 2px solid #a9a685;

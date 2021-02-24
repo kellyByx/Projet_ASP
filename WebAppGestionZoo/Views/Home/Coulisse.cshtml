@@ -1,9 +1,10 @@
-﻿@{
-    ViewBag.Title = "About";
+﻿@model WebAppGestionZoo.Models.CoulisseViewModel
+@{
+    ViewBag.Title = "Coulisse";
 }
 <div class="banner-header">
     <div class="container">
-        <h2>about</h2>
+        <h2>@ViewBag.Title</h2>
     </div>
 </div>
 <!--about-->
@@ -12,7 +13,7 @@
         <!--advantage-->
         <div class="advantages">
             <div class="container">
-                <h3>Advantages</h3>
+                <h3>Avantages</h3>
                 <div class="advantages-grids">
                     <div class="col-md-4 advantage-grid">
                         <div class="advantage">
@@ -58,12 +59,10 @@
         <!-- events -->
         <div class="events">
             <div class="container">
-                <h3>Events</h3>
-                <br/>
+                <h3>Nos engagements</h3>
+                <br />
                 <p class="para">
-                    Ut aut reiciendis voluptatibus maiores alias
-                    consequatur aut perferendis doloribus asperiores repellat incidunt ut labore et dolore magnam aliquam  quod maxime
-                    placeat facere possimusquaerat voluptatem
+                    Nous mettons en oeuvres au quotidient dans nos démarches et choix pour nos résidents afin d'assuré mais aussi adapté en fonctions des besoins les divers points suivant:
                 </p>
                 <div class="events-grids">
                     <div class="col-md-4 events-grid">
@@ -71,10 +70,9 @@
                             <span> </span>
                         </div>
                         <div class="col-xs-9 events-grid-right">
-                            <h4>Itaque earum rerum </h4>
+                            <h4>Espace de vie </h4>
                             <p>
-                                Ut aut reiciendis voluptatibus maiores alias
-                                consequatur aut perferendis doloribus asperiores repellat.
+                                Nous nous assuront que les espace de vie soit 2 à 3 fois supérieur au norme E.U imposé afin d'avoir un bon confort de vie à tous les résidents.'
                             </p>
                         </div>
                         <div class="clearfix"> </div>
@@ -84,10 +82,10 @@
                             <span> </span>
                         </div>
                         <div class="col-xs-9 events-grid-right">
-                            <h4>Itaque earum rerum </h4>
+                            <h4>Viandes </h4>
                             <p>
-                                Ut aut reiciendis voluptatibus maiores alias
-                                consequatur aut perferendis doloribus asperiores repellat.
+                                Nous nous fournissons en viandes et ceux-ci sont traiter dans le zoo.
+                                Nous nous assurons que celle-ci soit variées et riches pour nos carnivores.
                             </p>
                         </div>
                         <div class="clearfix"> </div>
@@ -155,10 +153,9 @@
                             <span> </span>
                         </div>
                         <div class="col-xs-9 events-grid-right">
-                            <h4>Itaque earum rerum </h4>
+                            <h4>Aménagements </h4>
                             <p>
-                                Ut aut reiciendis voluptatibus maiores alias
-                                consequatur aut perferendis doloribus asperiores repellat.
+                                Nos aménagement sont réaliser sur base des besoin de chaque animal présent dans chaque enclos ou zones.
                             </p>
                         </div>
                         <div class="clearfix"> </div>
@@ -168,10 +165,9 @@
                             <span> </span>
                         </div>
                         <div class="col-xs-9 events-grid-right">
-                            <h4>Itaque earum rerum </h4>
+                            <h4>Fruits</h4>
                             <p>
-                                Ut aut reiciendis voluptatibus maiores alias
-                                consequatur aut perferendis doloribus asperiores repellat.
+                                Nous utilison des fruits de saison et dans la mesure du possible europeen pour subvenir au besoin de nos pensionnaires.
                             </p>
                         </div>
                         <div class="clearfix"> </div>
@@ -181,7 +177,7 @@
                             <span> </span>
                         </div>
                         <div class="col-xs-9 events-grid-right">
-                            <h4>Itaque earum rerum </h4>
+                            <h4>Biodiversité </h4>
                             <p>
                                 Ut aut reiciendis voluptatibus maiores alias
                                 consequatur aut perferendis doloribus asperiores repellat.
@@ -194,32 +190,21 @@
             </div>
         </div>
         <!-- //events -->
-        <br/>
+        <br />
         <!--about-->
         <div class="ourteam">
             <div class="container">
-                <h3>our team</h3>
+                <br /><br />
+                <h3>Nos soigneurs </h3>
                 <div class="team-grids">
-                    <div class="col-md-3 team-grid">
-                        <img src="/images/t1.jpg" class="img-responsive" alt="" />
-                        <h4>Bradley Grosh</h4>
-                        <p>Were dolor in hendrerit in vulputate velit esse molestie con sequat</p>
-                    </div>
-                    <div class="col-md-3 team-grid">
-                        <img src="/images/t2.jpg" class="img-responsive" alt="" />
-                        <h4>david austin</h4>
-                        <p>Were dolor in hendrerit in vulputate velit esse molestie con sequat</p>
-                    </div>
-                    <div class="col-md-3 team-grid">
-                        <img src="/images/t3.jpg" class="img-responsive" alt="" />
-                        <h4>Patrick Pool</h4>
-                        <p>Were dolor in hendrerit in vulputate velit esse molestie con sequat</p>
-                    </div>
-                    <div class="col-md-3 team-grid">
-                        <img src="/images/t4.jpg" class="img-responsive" alt="" />
-                        <h4>Dayle Peters</h4>
-                        <p>Were dolor in hendrerit in vulputate velit esse molestie con sequat</p>
-                    </div>
+                    @foreach (WebAppGestionZoo.Models.SoigneurModel item in Model.Soigneur)
+                    {
+                        <div class="col-md-3 team-grid">
+                            <img src="@item.PhotoId" class="img-responsive" alt="" />
+                            <h4>@item.Nom @item.Prenom</h4>
+                            <p>Spécialisation: @item.Specialisation</p>
+                        </div>
+                    }
                     <div class="clearfix"></div>
                 </div>
             </div>

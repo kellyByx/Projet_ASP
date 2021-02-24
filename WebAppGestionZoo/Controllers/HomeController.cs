@@ -1,4 +1,5 @@
-﻿using System;
+﻿using WebAppGestionZoo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,27 +10,30 @@ namespace WebAppGestionZoo.Controllers
     public class HomeController : Controller
     {
         public ActionResult Index()
-        {
+        {   HomeViewModel hm = new HomeViewModel();
             ViewBag.Index = "active";
-            return View();
+            return View(hm);
         }
 
-        public ActionResult About()
+        public ActionResult Coulisse()
         {
-            ViewBag.About = "active";
-            return View();
+            CoulisseViewModel cm = new CoulisseViewModel();
+            ViewBag.Coulisse = "active";
+            return View(cm);
         }
 
-        public ActionResult Services()
+        public ActionResult Animaux()
         {
-            ViewBag.Services = "active";
-            return View();
+            AnimauxViewModel am = new AnimauxViewModel();
+            ViewBag.Animaux = "active";
+            return View(am);
         }
 
-        public ActionResult Gallery()
+        public ActionResult Gallerie()
         {
-            ViewBag.Gallery = "active";
-            return View();
+            GallerieViewModel gm = new GallerieViewModel();
+            ViewBag.Gallerie = "active";
+            return View(gm);
         }
 
         public ActionResult Contact()

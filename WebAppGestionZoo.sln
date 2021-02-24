@@ -7,6 +7,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppGestionZoo", "WebAppG
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DBZoo", "DBZoo\DBZoo.sqlproj", "{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestionDb", "GestionDb\GestionDb.csproj", "{0AD838B8-FBC6-45D8-8E37-5AB6AFE2673D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppGestionZoo.Repositories", "WebAppGestionZoo.Repositories\WebAppGestionZoo.Repositories.csproj", "{BCB62EC7-29BE-4BDA-867F-5674F221B43B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppGestionZoo.Entities", "WebAppGestionZoo.Entities\WebAppGestionZoo.Entities.csproj", "{3B6B50D1-282A-4EDE-AD15-86BD44BE1B94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppGestionZoo.Mappers", "WebAppGestionZoo.Mappers\WebAppGestionZoo.Mappers.csproj", "{20E1C110-F1B6-41BD-950D-76FCE939868D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppGestionZoo.Models", "WebAppGestionZoo.Models\WebAppGestionZoo.Models.csproj", "{20B2637D-F2F1-42A3-9416-EF97D264DF16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +33,26 @@ Global
 		{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4D161F9A-F59E-4CAE-ABCA-CFD89A933CC8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0AD838B8-FBC6-45D8-8E37-5AB6AFE2673D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD838B8-FBC6-45D8-8E37-5AB6AFE2673D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD838B8-FBC6-45D8-8E37-5AB6AFE2673D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD838B8-FBC6-45D8-8E37-5AB6AFE2673D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCB62EC7-29BE-4BDA-867F-5674F221B43B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCB62EC7-29BE-4BDA-867F-5674F221B43B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCB62EC7-29BE-4BDA-867F-5674F221B43B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCB62EC7-29BE-4BDA-867F-5674F221B43B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B6B50D1-282A-4EDE-AD15-86BD44BE1B94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B6B50D1-282A-4EDE-AD15-86BD44BE1B94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B6B50D1-282A-4EDE-AD15-86BD44BE1B94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B6B50D1-282A-4EDE-AD15-86BD44BE1B94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20E1C110-F1B6-41BD-950D-76FCE939868D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20E1C110-F1B6-41BD-950D-76FCE939868D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20E1C110-F1B6-41BD-950D-76FCE939868D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20E1C110-F1B6-41BD-950D-76FCE939868D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20B2637D-F2F1-42A3-9416-EF97D264DF16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20B2637D-F2F1-42A3-9416-EF97D264DF16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20B2637D-F2F1-42A3-9416-EF97D264DF16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20B2637D-F2F1-42A3-9416-EF97D264DF16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

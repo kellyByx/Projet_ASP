@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Gallerie";
+}
+
+@section SuiteCss
+{
+    <!--lightbox-->
+    @Styles.Render("~/Content/css/jqueryLightbox")
+}
+
+@section BibilothequeScripts
+{
+    @Scripts.Render("~/bundles/Jquerylightbox")
+}
+
+@section CustomScripts
+{
+    <script>
+        // Initiate Lightbox
+        $(function () {
+            $('.gallery a').lightbox();
+        });
+    </script>
+    <!--lightbox-->
+}
+
+<div class="banner-header">
+    <div class="container">
+        <h2> @ViewBag.Title </h2>
+    </div>
+</div>
+<div class="content">
+    <!--gallery-->
+    <div class="gallery-section">
+        <div class="container">
+            @foreach (WebAppGestionZoo.Models.PhotoModel item in Model.PhotoGallerie)
+            {
+                <div class="col-md-4 gallery-grid">
+                    <div class="gallery">
+                        <a class="mask" href="@item.Normal"><img src="@item.Normal" class="img-responsive zoom-img" alt="/" title="image-name"></a>
+                    </div>
+                </div>
+            }
+
+            <!--gallery-->
+        </div>
+    </div>
+</div>

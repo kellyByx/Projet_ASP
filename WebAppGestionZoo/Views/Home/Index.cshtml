@@ -1,4 +1,5 @@
-﻿@{
+﻿@model WebAppGestionZoo.Models.HomeViewModel
+@{
     ViewBag.Title = "Home Page";
 }
 @section BibilothequeScripts
@@ -43,17 +44,23 @@
 <div class="header-banner">
     <div class="container">
         <div class="head-banner">
-            <h3>Dave Zucconi Conservation Center</h3>
-            <p>Donec dui velit, hendrerit id pharetra nec, posuere porta nisl. Donec magna nulla, commodo in ultrices faucibus lacus aliquet.Donec dui velit, hendrerit id pharetra nec</p>
+            <br /> 
+            <h3>Bienvenu à Zoo Planet</h3>
+
+
         </div>
         <div class="banner-grids">
             <div class="col-md-6 banner-grid">
-                <h4>Vestibulum sagittis</h4>
-                <p>Donec dui velit, hendrerit id pharetra nec, posuere porta nisl. Donec magna nulla, commodo in ultrices faucibus lacus aliquet.</p>
+                <h4>Venir dans notre zoo c'est </h4>
+                <p>venir vivre une expérience immersive dans un écrin de verdure, au détour d’allées ombragées et dans une végétation luxuriante, le zoo vous invite au dépaysement. Un agréable moment en famille, pour découvrir les activitées quotidiennes et de nouvelles expériences à chaque visite !</p>
             </div>
             <div class="col-md-6 banner-grid">
-                <h4>Itaque Earum Rerum</h4>
-                <p>Donec dui velit, hendrerit id pharetra nec, posuere porta nisl. Donec magna nulla, commodo in ultrices faucibus lacus aliquet.</p>
+                <h4>
+                    Nos Ateliers pédagogiques
+                </h4>
+                <p>
+                    Le zoo propose aux groupes scolaires des ateliers pédagogiques aux thèmes variés et aux objectifs simples : faire découvrir les particularités d'une espèce, comprendre son mode de vie et les dangers qui menacent sa survie dans la nature.
+                </p>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -64,34 +71,34 @@
 <div class="content">
     <div class="welcome">
         <div class="container">
-            <h2>welcome to zoo planet</h2>
+            <h2>Venez découvrir </h2>
             <div class="welcome-grids">
                 <div class="col-md-3 welcome-grid">
                     <img src="/images/p1.jpg" alt=" " class="img-responsive" />
                     <div class="wel-info">
-                        <h4>Assumenda est</h4>
-                        <p>Masagni dolores eoquie voluptate msequi nesciunt. Nique porro quisquam est qui dolorem ipsumquia dolor sitamet consectet, adipisci unumquam eius.</p>
+                        <h4>Activité</h4>
+                        <p>Assistez au moment privilégiéaux du goûters de nos animaux  avec nos soigneurs&nbsp;: en fonction de la saison vous verrez celui des guépards, des loutres, des pandas roux … et bien d’autres encore&nbsp;! </p>
                     </div>
                 </div>
                 <div class="col-md-3 welcome-grid">
-                    <img src="/images/p2.jpg" alt=" " class="img-responsive" />
+                    <img src="~/images/guep.jpg" alt=" " class="img-responsive" />
                     <div class="wel-info">
-                        <h4>Assumenda est</h4>
-                        <p>Masagni dolores eoquie voluptate msequi nesciunt. Nique porro quisquam est qui dolorem ipsumquia dolor sitamet consectet, adipisci unumquam eius.</p>
+                        <h4>Un Autre regard</h4>
+                        <p><p>Dans un espace unique et spécialement conçu pour lui, redécouvrez le jaguar! Un prédateur qui n’hésite pas à se jeter dans l’eau pour chasser l'anaconda. Un bassin en vision subaquatique vous permettra de l'observer.</p></p>
                     </div>
                 </div>
                 <div class="col-md-3 welcome-grid">
                     <img src="/images/p3.jpg" alt=" " class="img-responsive" />
                     <div class="wel-info">
-                        <h4>Assumenda est</h4>
-                        <p>Masagni dolores eoquie voluptate msequi nesciunt. Nique porro quisquam est qui dolorem ipsumquia dolor sitamet consectet, adipisci unumquam eius.</p>
+                        <h4>Nos volières</h4>
+                        <p>Pénétrez par exemple dans notre volière des loriquets et laissez la magie opérer… Vous pourrez les admiré en vol libre et ces petits perroquets au plumage coloré viendront délicatement à votre rencontre</p>
                     </div>
                 </div>
                 <div class="col-md-3 welcome-grid">
                     <img src="/images/p4.jpg" alt=" " class="img-responsive" />
                     <div class="wel-info">
-                        <h4>Assumenda est</h4>
-                        <p>Masagni dolores eoquie voluptate msequi nesciunt. Nique porro quisquam est qui dolorem ipsumquia dolor sitamet consectet, adipisci unumquam eius.</p>
+                        <h4>Terrain ouvert</h4>
+                        <p>Découvrez une zone en plaine aires entièrement rénovée avec des aménagement  pensé pour les besoins de nos résident. Certains ont été créer spécialement  par des artisans locaux et partez à la rencontre d’animaux insolites!</p>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -102,22 +109,22 @@
     <!--feature-->
     <div class="feature">
         <div class="container">
-            <h3>Our Features</h3>
+            <h3>Mise en place</h3>
             <div class="feature-grids">
                 <div class="col-md-4 feature-grid">
                     <span class="glyphicon glyphicon-camera" aria-hidden="true"></span>
-                    <h4>Earum Rerum</h4>
-                    <p>Masagni dolores eoquie voluptate msequi nesciunt. Nique porro quisquam est qui dolorem ipsumquia dolor sitamet consectet, adipisci unumquam eius.</p>
+                    <h4>Archives de photos</h4>
+                    <p>Nous réalisons des archives de photos de chacun de nos résident afin de pouvoir voir leurs évolutions et pouvoir vous partagez celles-ci afin que vous puissiez prendre de leurs nouvelles.</p>
                 </div>
                 <div class="col-md-4 feature-grid">
                     <span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span>
-                    <h4>Itaque Earum</h4>
-                    <p>Masagni dolores eoquie voluptate msequi nesciunt. Nique porro quisquam est qui dolorem ipsumquia dolor sitamet consectet, adipisci unumquam eius.</p>
+                    <h4>Capsule Vidéo</h4>
+                    <p>Nous réalisons des capsules vidéo afin de pouvoir mieux comprendre nos résidsmall/ments et leurs besoins. Cela aide énormement à leurs suivit seul ou au sein de leurs environement et nous permet de vous proposer des vidéos informatives avec nos réisdents que vous pouvez rencontrez</p>
                 </div>
                 <div class="col-md-4 feature-grid">
                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                    <h4>Assumenda est</h4>
-                    <p>Masagni dolores eoquie voluptate msequi nesciunt. Nique porro quisquam est qui dolorem ipsumquia dolor sitamet consectet, adipisci unumquam eius.</p>
+                    <h4>Recherches</h4>
+                    <p>Nous finançons des projets de recherches et mettons en place des projets sur site pour aider la récolte et l’analyse de données, afin d’en savoir toujours plus sur ces espèces et leurs modes de vies.</p>
                 </div>
                 <div class="clearfix"></div>
             </div>
@@ -127,19 +134,13 @@
     <!--animals-->
     <div class="animals">
         <div class="container">
-            <h3>animals</h3>
+            <h3>animaux</h3>
             <div class="clients">
                 <ul id="flexiselDemo3">
-                    <li><img src="/images/m1.jpg" class="img-responsive" alt="" /></li>
-                    <li><img src="/images/m2.jpg" class="img-responsive" alt="" /></li>
-                    <li><img src="/images/m3.jpg" class="img-responsive" alt="" /></li>
-                    <li><img src="/images/m4.jpg" class="img-responsive" alt="" /></li>
-                    <li><img src="/images/m5.jpg" class="img-responsive" alt="" /></li>
-                    <li><img src="/images/m1.jpg" class="img-responsive" alt="" /></li>
-                    <li><img src="/images/m2.jpg" class="img-responsive" alt="" /></li>
-                    <li><img src="/images/m3.jpg" class="img-responsive" alt="" /></li>
-                    <li><img src="/images/m4.jpg" class="img-responsive" alt="" /></li>
-                    <li><img src="/images/m5.jpg" class="img-responsive" alt="" /></li>
+                    @foreach (WebAppGestionZoo.Models.PhotoModel item in Model.PhotoSlider)
+                    {
+                        <li><img src="@item.Small" class="img-responsive" alt="" /></li>
+                    }
                 </ul>
                 <div class="clearfix"></div>
             </div>
@@ -149,14 +150,14 @@
     <!--testimonials-->
     <div class="testimonials">
         <div class="container">
-            <h3>testimonials</h3>
-            <p>Aenean nonummy hendrerit mau phasellu porta. Fusce suscipit varius mi sed. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio morbi. Ut viverra mauris justo, quis auctor nisi. Suspendisse sit amet diam diam, eget volutpat lacus. Vestibulum faucibus scelerisque nisl vitae scelerisque. Sed tristique metus eu…</p>
-            <h4><a href="#">John Anderson</a></h4>
+            <h3>Pedagogie</h3>
+            <p>Pour mieux protéger, il faut mieux connaître&nbsp;! Tout au long de votre visite,<br/> pancartes informatives, soigneurs et animations sont là pour vous en apprendre toujours un peu plus sur ce patrimoine vivant.</p>
+            @*<h4><a href="#">John Anderson</a></h4>*@
         </div>
     </div>
     <!--testimonials-->
     <!--events-->
-    <div class="events">
+    @*<div class="events">
         <div class="container">
             <h3>events</h3>
             <div class="events-grids">
@@ -183,6 +184,6 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-    </div>
+    </div>*@
     <!--events-->
 </div>

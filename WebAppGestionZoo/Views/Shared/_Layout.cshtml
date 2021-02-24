@@ -41,19 +41,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="@ViewBag.Index"><a href="/Home/Index">Home <span class="sr-only">(current)</span></a></li>
-                                <li class="@ViewBag.About"><a href="/Home/About">About</a></li>
-                                <li class="@ViewBag.Services"><a href="/Home/Services">Services</a></li>
+                                <li class="@ViewBag.Index"><a href="/Home/Index">Accueil <span class="sr-only">(current)</span></a></li>
+                                <li class="@ViewBag.Coulisse"><a href="/Home/Coulisse">Les Coulisses</a></li>
+                                <li class="@ViewBag.Animaux"><a href="/Home/Animaux">Animaux</a></li> @*ou Actualitéou animaux?*@
                                 @*<li class="dropdown">
-                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery <span class="caret"></span></a>
-                                        <ul class="dropdown-menu">
-                                            <li><a href="/Home/Gallery">Gallery1</a></li>
-                                            <li><a href="/Home/Gallery">Gallery2</a></li>
-                                            <li><a href="/Home/Gallery">Gallery3</a></li>
-                                        </ul>
-                                    </li>*@
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gallery <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="/Home/Gallery">Gallery1</a></li>
+                <li><a href="/Home/Gallery">Gallery2</a></li>
+                <li><a href="/Home/Gallery">Gallery3</a></li>
+            </ul>
+        </li>*@
 
-                                <li class="@ViewBag.Gallery"><a href="/Home/Gallery">Gallery</a></li>
+                                <li class="@ViewBag.Gallerie"><a href="/Home/Gallerie">Gallerie</a></li>
                                 <li class="@ViewBag.Contact"><a href="/Home/Contact">Contact</a></li>
                                 <li class="@ViewBag.Connection"><a href="/Home/Connection">Connection</a></li>
                             </ul>
@@ -71,38 +71,43 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="specials-grids">
                 <div class="col-md-3 specials1">
-                    <h3>timings</h3>
-                    <p>10:30 Am - 10:45 Am Dino Chat</p>
-                    <p>11:00 Am - 11:15 Am Panda</p>
-                    <p>11:30 Am - 12:00 PM Farm Chat</p>
-                    <p>12:00 Pm - 01:00 Pm Feeding</p>
+                    <h3>Horaires</h3>
+                    <p>Du 1/04 au 30/09:</p>
+                    <p>9h00 - 19h00</p>
+                    <p>Le reste de l'année:</p>
+                    <p>9h00 - 18h00</p>
+
                 </div>
-                <div class="col-md-3 specials1">
-                    <h3> details</h3>
-                    <ul>
-                        <li><a href="/Home/About">About Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="/Home/Contact">SiteMap</a></li>
-                    </ul>
-                </div>
+
                 <div class="col-md-3 specials1">
                     <h3>contact</h3>
                     <address>
-                        <p>The Company Name Inc.</p>
-                        <p>Glasgow,Le 99 Pr 45.</p>
-                        <p>Telephone : +1 800 603 6035</p>
-                        <p>FAX : +1 800 889 9898</p>
-                        <p>Email : <a href="mailto:example@mail.com">example@mail.com</a></p>
+                        <p>Zoo Planet Inc.</p>
+                        <p>
+                            3 Rue du Transvaal,
+                        </p>
+                        <p>33600 Pessac </p>
+                        <p>Téléphone :+33 (0)557892810</p>
+                        <p>Email : <a href="mailto:ZooPlanet@mail.com">ZooPlanet@mail.com</a></p>
                     </address>
                 </div>
+
                 <div class="col-md-3 specials1">
-                    <h3>social</h3>
+                    <h3> details</h3>
                     <ul>
-                        <li><a href="#">facebook</a></li>
-                        <li><a href="#">twitter</a></li>
-                        <li><a href="#">google+</a></li>
-                        <li><a href="#">vimeo</a></li>
+                        @*<li><a href="/Home/About">About Us</a></li>*@                
+                        <li><a href="https://www.zoo-bordeaux-pessac.com/old-content/uploads/2020/07/DOSSIER-PEDAGO-RESA-SCOLAIRES-VS.pdf" target="_blank">Charte Visiteur</a></li>
+                        <li><a href="https://www.zoo-bordeaux-pessac.com/old-content/uploads/2020/07/ASSURANCE-ZOO.pdf" target="_blank">Assurance</a></li>
+                        <li><a href="https://www.zoo-bordeaux-pessac.com/old-content/uploads/2020/07/CGV-ZOOBPessac.pdf" target="_blank">Conditions Générales de vente</a></li>
+                        <li><a href="/Home/Contact">Site Map</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-3 specials1">
+                    <h3>Reseaux</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/ZooBordeauxPessac" target="_blank">facebook</a></li>
+                        <li><a href="https://www.instagram.com/zoobordeauxpessac/?hl=fr" target="_blank">instagram</a></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
