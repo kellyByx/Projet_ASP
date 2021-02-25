@@ -20,26 +20,32 @@ namespace WebAppGestionZoo.Repositories
             _messageRepo = new MessageRepository(connectionString);
         } 
 
-        public SoigneurModel GetSoigneur()
+        public List<SoigneurModel> GetSoigneur()
         {
             //section des soigneurs
           
-            SoigneurEntity soigneurFromDb = _soigneurRepo.GetOne(1);
+            List< SoigneurEntity> soigneurFromDb = _soigneurRepo.Get();
 
-
-            //mapping:
-            SoigneurModel Soigneur = new SoigneurModel();//new List<SoigneurModel>();
+            List<SoigneurModel> soigneurs = new List<SoigneurModel>();
             //Soigneur.Add(new SoigneurModel() { Nom = soigneurFromDb.Nom, Prenom = soigneurFromDb.Prenom, 
-            Soigneur.Nom = soigneurFromDb.Nom;
-            Soigneur.Prenom = soigneurFromDb.Prenom;
-            Soigneur.Specialisation = soigneurFromDb.Specialisation;
-            Soigneur.PhotoId = "/images/t1.jpg" + soigneurFromDb.Photo;
+            foreach (SoigneurEntity item in soigneurFromDb)
+            {
 
-            //Soigneur.Add(new SoigneurModel() {Nom="Grosh", Prenom="Bradley", Specialisation="Les oiseaux", PhotoId="/images/t1.jpg" });
-            //Soigneur.Add(new SoigneurModel() { Nom = "Peters", Prenom = "Dayle", Specialisation = "Les reptiles", PhotoId = "/images/t2.jpg" });
-            //Soigneur.Add(new SoigneurModel() { Nom = "Pool", Prenom = "Marie", Specialisation = "Les Ongulés", PhotoId = "/images/t3.jpg" });
-            //Soigneur.Add(new SoigneurModel() { Nom = "Kyu", Prenom = "Nathan", Specialisation = "Les primates", PhotoId = "/images/t4.jpg" });
-            return Soigneur;
+                //mapping:
+                SoigneurModel Soigneur = new SoigneurModel();//new List<SoigneurModel>();
+
+                Soigneur.Nom = item.Nom;
+                Soigneur.Prenom = item.Prenom;
+                Soigneur.Specialisation = item.Specialisation;
+                Soigneur.PhotoId = "/images/" + item.Photo;
+
+                soigneurs.Add(Soigneur);
+                
+
+
+            }
+
+            return soigneurs;
         }
 
         #region Contact

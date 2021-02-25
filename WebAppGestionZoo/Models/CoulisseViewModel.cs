@@ -16,7 +16,7 @@ namespace WebAppGestionZoo.Models
 
         public CoulisseViewModel()
         {
-            Soigneur = ctx.GetSoigneurModel();
+           Soigneur = ctx.GetSoigneur();
         }                   
 
         public List<SoigneurModel> Soigneur

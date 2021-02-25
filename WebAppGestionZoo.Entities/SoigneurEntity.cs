@@ -14,7 +14,6 @@ namespace WebAppGestionZoo.Entities
         private string _specialisation;
         private string _email;
         private string _loging;
-        //[Password]       VARBINARY(50) 
         private string _telephone;
         private string _photo;
 

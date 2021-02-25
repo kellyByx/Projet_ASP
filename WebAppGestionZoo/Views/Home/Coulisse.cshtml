@@ -197,9 +197,9 @@
                 <br /><br />
                 <h3>Nos soigneurs </h3>
                 <div class="team-grids">
-                    @foreach (WebAppGestionZoo.Models.SoigneurModel item in Model.Soigneur)
+                    @foreach (WebAppGestionZoo.Models.SoigneurModel item in Model.Soigneur) 
                     {
-                        <div class="col-md-3 team-grid">
+                        <div class="col-md-3 team-grid ">
                             <img src="@item.PhotoId" class="img-responsive" alt="" />
                             <h4>@item.Nom @item.Prenom</h4>
                             <p>Spécialisation: @item.Specialisation</p>

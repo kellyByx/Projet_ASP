@@ -531,11 +531,14 @@ span.glyphicon.glyphicon-user:hover {
     line-height: 1.8em;
  }
 .team-grids {
-  margin-top: 3em;
+    margin-top: 3em;
+   
 }
+
+
 .advantages {
-  text-align: center;
-  padding: 1em 0 4em;
+    text-align: center;
+    padding: 1em 0 4em;
 }
 .left-grid {
   float: left;
@@ -598,7 +601,7 @@ span.glyphicon.glyphicon-user:hover {
  }
 
 .services-grid-bottom{
-    margin-bottom:1vh;
+    margin-bottom:3rem;
 }
 .services-info {
     border-bottom: 2px solid#a9a685;

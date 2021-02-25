@@ -29,7 +29,7 @@ namespace WebAppGestionZoo.Repositories
         public bool Insert(MessageEntity toInsert)
         {
             string requete = @"INSERT INTO Message (Nom, Email, Sujet, Information, DateEnvoie)
-                               VALUES (@Nom, @Email, @Sujet, @Message, GETDATE())";
+                               VALUES (@Nom, @Email, @Sujet, @Information, GETDATE())";
             return base.Insert(toInsert, requete);
         }
 

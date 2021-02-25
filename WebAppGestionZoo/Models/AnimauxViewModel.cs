@@ -8,48 +8,35 @@ namespace WebAppGestionZoo.Models
     public class AnimauxViewModel
     {
         private List<AnimalModel> _animal;
-        private List<PhotoModel> _photoAnimal;
+        
 
         public AnimauxViewModel()
         {
             //section Animaux
-            
             Animal = new List<AnimalModel>();
-            Animal.Add(new AnimalModel() { Image = "/images/photos/haute//s1.jpg", Classe = "Oiseaux", Espece = "Aras", Famille = "Psittacidés" });
-            Animal.Add(new AnimalModel() { Image = "/images/photos/haute//s2.jpg", Classe = "Primates", Espece = "XXX", Famille = "YYYY" });
-            Animal.Add(new AnimalModel() { Image = "/images/photos/haute//s3.jpg", Classe = "Mammifère", Espece = "XXX", Famille = "YYYY" });
-            Animal.Add(new AnimalModel() { Image = "/images/photos/haute//s4.jpg", Classe = "Mammifère", Espece = "XXX", Famille = "YYYY" });
-            Animal.Add(new AnimalModel() { Image = "/images/photos/haute//s1.jpg", Classe = "Oiseaux", Espece = "Aras", Famille = "Psittacidés" });
-            Animal.Add(new AnimalModel() { Image = "/images/photos/haute//s2.jpg",Classe = "Primates", Espece = "XXX", Famille = "YYYY" });
-            Animal.Add(new AnimalModel() { Image = "/images/photos/haute//s3.jpg", Classe = "Mammifère", Espece = "XXX", Famille = "YYYY" });
-            Animal.Add(new AnimalModel() { Image = "/images/photos/haute//s4.jpg", Classe = "Mammifère", Espece = "XXX", Famille = "YYYY" });
-            /*
-            Animal = new List<AnimalModel>();
-            Animal.Add(new AnimalModel() {  Classe = "Oiseaux", Espece = "Aras", Famille = "Psittacidés" });
-            Animal.Add(new AnimalModel() {  Classe = "Primates", Espece = "XXX", Famille = "YYYY" });
+           Animal.Add(new AnimalModel() {  Classe = "Oiseaux", Espece = "Aras", Famille = "Psittacidés"});
+            Animal[0].PhotoAnimal.Haute = "/images/photos/haute/s1.jpg";
+           Animal.Add(new AnimalModel() {  Classe = "Primates", Espece = "XXX", Famille = "YYYY" });
+            Animal[1].PhotoAnimal.Haute = "/images/photos/haute/s2.jpg";
             Animal.Add(new AnimalModel() {  Classe = "Mammifère", Espece = "XXX", Famille = "YYYY" });
+            Animal[2].PhotoAnimal.Haute = "/images/photos/haute/s3.jpg";
             Animal.Add(new AnimalModel() {  Classe = "Mammifère", Espece = "XXX", Famille = "YYYY" });
-            Animal.Add(new AnimalModel() {  Classe = "Oiseaux", Espece = "Aras", Famille = "Psittacidés" });
+            Animal[3].PhotoAnimal.Haute = "/images/photos/haute/s4.jpg";
+            Animal.Add(new AnimalModel() { Classe = "Oiseaux", Espece = "Aras", Famille = "Psittacidés" });
+            Animal[4].PhotoAnimal.Haute = "/images/photos/haute/s1.jpg";
             Animal.Add(new AnimalModel() { Classe = "Primates", Espece = "XXX", Famille = "YYYY" });
-            Animal.Add(new AnimalModel() {  Classe = "Mammifère", Espece = "XXX", Famille = "YYYY" });
-            Animal.Add(new AnimalModel() {  Classe = "Mammifère", Espece = "XXX", Famille = "YYYY" });
-            //photo d'animal
-            PhotoAnimal = new List<PhotoModel>();
-            PhotoAnimal.Add(new PhotoModel() { Haute = "/images/photos/haute/s1.jpg"});
-            PhotoAnimal.Add(new PhotoModel() { Haute = "/images/photos/haute/s2.jpg" });
-            PhotoAnimal.Add(new PhotoModel() { Haute = "/images/photos/haute/s3.jpg" });
-            PhotoAnimal.Add(new PhotoModel() { Haute = "/images/photos/haute/s4.jpg" });
-            PhotoAnimal.Add(new PhotoModel() { Haute = "/images/photos/haute/s1.jpg" });
-            PhotoAnimal.Add(new PhotoModel() { Haute = "/images/photos/haute/s2.jpg" });
-            PhotoAnimal.Add(new PhotoModel() { Haute = "/images/photos/haute/s3.jpg" });
-            PhotoAnimal.Add(new PhotoModel() { Haute = "/images/photos/haute/s4.jpg" });
-  */
+            Animal[5].PhotoAnimal.Haute = "/images/photos/haute/s2.jpg";
+            Animal.Add(new AnimalModel() { Classe = "Mammifère", Espece = "XXX", Famille = "YYYY" });
+            Animal[6].PhotoAnimal.Haute = "/images/photos/haute/s3.jpg";
+            Animal.Add(new AnimalModel() { Classe = "Mammifère", Espece = "XXX", Famille = "YYYY" });
+            Animal[7].PhotoAnimal.Haute = "/images/photos/haute/s4.jpg";
+
         }
 
 
         public List<AnimalModel> Animal 
         { get => _animal; set => _animal = value; }
-        public List<PhotoModel> PhotoAnimal { get => _photoAnimal; set => _photoAnimal = value; }
+   
     }
 
    
