@@ -1,22 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
+using WebAppGestionZoo.Repositories;
 
 namespace WebAppGestionZoo.Models
 {
     public class CoulisseViewModel
     {
+        private UnitOfWork ctx = new UnitOfWork(ConfigurationManager.ConnectionStrings["Cnstr"].ConnectionString);
+
+           
         private List<SoigneurModel> _soigneur;
 
         public CoulisseViewModel()
         {
-            //section des soigneurs
-            Soigneur = new List<SoigneurModel>();
-            Soigneur.Add(new SoigneurModel() {Nom="Grosh", Prenom="Bradley", Specialisation="Les oiseaux", PhotoId="/images/t1.jpg" });
-            Soigneur.Add(new SoigneurModel() { Nom="Peters", Prenom="Dayle", Specialisation="Les reptiles", PhotoId ="/images/t2.jpg" });
-            Soigneur.Add(new SoigneurModel() { Nom="Pool", Prenom="Marie", Specialisation="Les Ongulés", PhotoId ="/images/t3.jpg" });
-            Soigneur.Add(new SoigneurModel() { Nom="Kyu", Prenom="Nathan", Specialisation="Les primates", PhotoId ="/images/t4.jpg" });
+            Soigneur = ctx.GetSoigneurModel();
         }                   
 
         public List<SoigneurModel> Soigneur

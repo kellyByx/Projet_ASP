@@ -16,6 +16,7 @@ namespace WebAppGestionZoo.Entities
         private string _loging;
         //[Password]       VARBINARY(50) 
         private string _telephone;
+        private string _photo;
 
         public int IdSoigneur { get => _idSoigneur; set => _idSoigneur = value; }
         public string Nom { get => _nom; set => _nom = value; }
@@ -24,5 +25,6 @@ namespace WebAppGestionZoo.Entities
         public string Email { get => _email; set => _email = value; }
         public string Loging { get => _loging; set => _loging = value; }
         public string Telephone { get => _telephone; set => _telephone = value; }
+        public string Photo { get => _photo; set => _photo = value; }
     }
 }

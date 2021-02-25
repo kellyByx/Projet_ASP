@@ -8,7 +8,7 @@ using WebAppGestionZoo.Entities;
 
 namespace WebAppGestionZoo.Repositories
 {
-    public class SoigneurRepository : BaseRepository<SoigneurEntity>, IConcreteRepository<SoigneurEntity>;
+    public class SoigneurRepository : BaseRepository<SoigneurEntity>, IConcreteRepository<SoigneurEntity>
     {
         public SoigneurRepository(string connectionString): base(connectionString)
         {

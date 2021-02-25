@@ -17,12 +17,12 @@ namespace WebAppGestionZoo.Models
         public string Image
         {
             get
-            {
-                return _image;
-            }
+           {
+               return _image;
+           }
 
             set
-            {
+          {
                 _image = value;
             }
         }

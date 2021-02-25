@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Configuration;
+using WebAppGestionZoo.Repositories;
 
 namespace WebAppGestionZoo.Controllers
 {
@@ -36,17 +38,38 @@ namespace WebAppGestionZoo.Controllers
             return View(gm);
         }
 
+        public ActionResult Connection()
+        {
+            ViewBag.Connection = "active";
+            return View();
+        }
+
+        //fomulaire
+        [HttpGet]
         public ActionResult Contact()
         {
             ViewBag.Contact = "active";
             return View();
         }
 
-        public ActionResult Connection()
+        [HttpPost]
+        public ActionResult Contact(ContactModel contact) 
         {
-            ViewBag.Connection = "active";
-            return View();
+             UnitOfWork ctx = new UnitOfWork(ConfigurationManager.ConnectionStrings["Cnstr"].ConnectionString);
+             if (ctx.SaveContact(contact))
+            {
+                ViewBag.SuccessMessage = " Message bien envoyé";
+                return View();
+            }
+            else
+            {
+                ViewBag.ErrorMessage = " Message non enregistré";
+                return View();
+            }
+     
+             
         }
+
 
 
     }

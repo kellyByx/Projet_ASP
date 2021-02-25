@@ -234,6 +234,10 @@
       <Project>{20b2637d-f2f1-42a3-9416-ef97d264df16}</Project>
       <Name>WebAppGestionZoo.Models</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WebAppGestionZoo.Repositories\WebAppGestionZoo.Repositories.csproj">
+      <Project>{bcb62ec7-29be-4bda-867f-5674f221b43b}</Project>
+      <Name>WebAppGestionZoo.Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
