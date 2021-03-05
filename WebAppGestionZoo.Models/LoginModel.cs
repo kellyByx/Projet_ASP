@@ -1,5 +1,5 @@
 ﻿using System;
-/* using System.Collections.Generic;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace NetFlask.Models
 {
-   public class LoginModel
-   {
-      private string _login, _password;
+    public class LoginModel
+    {
+        private string _login, _password;
 
         [Required]
         public string Login
@@ -37,6 +37,5 @@ namespace NetFlask.Models
                 _password = value;
             }
         }
-   }
+    }
 }
-*/

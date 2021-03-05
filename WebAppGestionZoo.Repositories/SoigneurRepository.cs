@@ -27,7 +27,8 @@ namespace WebAppGestionZoo.Repositories
 
         public SoigneurEntity GetOne(int PK)
         {
-            string requete = "Select * from Soigneur where IdSoigneur = @id";
+            string requete = "Select * from Soigneur where IdSoigneur = @id"; // ici va remplace l'id ds baseRepo par pk ou peut faire ici = +PK qui est + clair mais mon propre que ici notre id
+            //TSQL==>@ et si avait été PLSQL ==>:
             return base.GetOne(PK, requete);
         }
 

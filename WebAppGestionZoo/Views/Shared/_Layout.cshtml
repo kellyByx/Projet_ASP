@@ -55,7 +55,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
                                 <li class="@ViewBag.Gallerie"><a href="/Home/Gallerie">Gallerie</a></li>
                                 <li class="@ViewBag.Contact"><a href="/Home/Contact">Contact</a></li>
-                                <li class="@ViewBag.Connection"><a href="/Home/Connection">Connection</a></li>
+                                @if (WebAppGestionZoo.infra.SessionUtils.IsLogged)
+                                {
+                                    <li class="@ViewBag.Connection"><a href="/Account/Logout">déconnection</a></li>
+                                }
+                                else
+                                {
+                                    <li class="@ViewBag.Connection"><a href="/Account/Login">Connection</a></li>
+                                }
+                                <li class="@ViewBag.Membre"><a href="~/Membre/Home/Index">Membre</a></li>
+
                             </ul>
 
                         </div><!-- /.navbar-collapse -->

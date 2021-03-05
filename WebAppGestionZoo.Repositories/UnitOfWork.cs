@@ -38,11 +38,7 @@ namespace WebAppGestionZoo.Repositories
                 Soigneur.Prenom = item.Prenom;
                 Soigneur.Specialisation = item.Specialisation;
                 Soigneur.PhotoId = "/images/" + item.Photo;
-
                 soigneurs.Add(Soigneur);
-                
-
-
             }
 
             return soigneurs;

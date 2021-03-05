@@ -1,0 +1,76 @@
+﻿@model NetFlask.Models.LoginModel
+
+@{
+    ViewBag.Title = "Connection";
+}
+
+<div class="banner-header">
+    <div class="container">
+        <h2>@ViewBag.Title</h2>
+    </div>
+</div>
+
+<div class="content">
+    <div class="contact">
+        <div class="container">
+            <div class="contact_top">
+                <div class="col-md-8 contact_left">
+                    <h3>Connectez-vous</h3>
+                    <p>
+                        Chère visiteur, <br /> Cet espace de connection est exclusivement reserver  aux membres.
+                        <br /> Il ne vous est donc pas possible de vous créer un compte. Merci d'avance de votre coopération.
+                    </p>
+
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+
+            @*<hr />*@
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Login, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Login, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Login, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Valider" class="btn btn-default" />
+                </div>
+            </div>
+            @ViewBag.Error
+        </div>
+        <br /> <br /> <br /> <br />
+    }
+
+    <!--header-->
+    @*<form>
+            <div class="form_details">
+                <input type="text" name="Login" class="text" value="Login" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Login';}">
+                <input type="text" name="Password" class="text" value="Passeword" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+                <div class="clearfix"> </div>
+                <div class="sub-button">
+                    <input type="submit" value="Valider">
+                </div>
+            </div>
+      </form>*@
+
+
+
+

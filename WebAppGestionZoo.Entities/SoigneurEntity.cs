@@ -9,13 +9,7 @@ namespace WebAppGestionZoo.Entities
     public class SoigneurEntity
     {
         private int _idSoigneur;
-        private string _nom;
-        private string _prenom;
-        private string _specialisation;
-        private string _email;
-        private string _loging;
-        private string _telephone;
-        private string _photo;
+        private string _nom, _prenom, _specialisation, _email, _loging, _telephone, _photo, _salt;
 
         public int IdSoigneur { get => _idSoigneur; set => _idSoigneur = value; }
         public string Nom { get => _nom; set => _nom = value; }
@@ -25,5 +19,6 @@ namespace WebAppGestionZoo.Entities
         public string Loging { get => _loging; set => _loging = value; }
         public string Telephone { get => _telephone; set => _telephone = value; }
         public string Photo { get => _photo; set => _photo = value; }
+        public string Salt { get => _salt; set => _salt = value; }
     }
 }

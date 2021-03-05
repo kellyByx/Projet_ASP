@@ -229,11 +229,11 @@
     <Content Include="Views\Home\Coulisse.cshtml" />
     <Content Include="Views\Home\Animaux.cshtml" />
     <Content Include="Views\Home\Gallerie.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Membre\Data\" />
-    <Folder Include="Views\Account\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

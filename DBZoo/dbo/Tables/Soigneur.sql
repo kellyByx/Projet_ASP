@@ -5,11 +5,14 @@
     [Specialisation] VARCHAR (50)   NOT NULL,
     [Email]          NVARCHAR (256) NOT NULL,
     [Login]          NVARCHAR (32)  NOT NULL,
-    [Password]       VARBINARY (50) NULL,
+    [Password]       VARBINARY (32) NULL,
     [Telephone]      NVARCHAR (16)  NOT NULL,
     [Photo]          NVARCHAR (250) NOT NULL,
+    [Salt]           CHAR (8)       NULL,
     CONSTRAINT [PK_Soigneur] PRIMARY KEY CLUSTERED ([idSoigneur] ASC)
 );
+
+
 
 
 

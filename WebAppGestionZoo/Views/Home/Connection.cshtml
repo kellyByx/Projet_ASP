@@ -20,14 +20,15 @@
                     <p> Il ne vous est donc pas possible de vous créer un compte. Merci d'avance de votre coopération.</p>
                     <form>
                         <div class="form_details">
-                            <input type="text" class="text" value="Login" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Login';}">
-                            <input type="text" class="text" value="Passeword" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+                            <input type="text" name="Login" class="text" value="Login" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Login';}">
+                            <input type="text" name="Password" class="text" value="Passeword" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
                             <div class="clearfix"> </div>
                             <div class="sub-button">
                                 <input type="submit" value="Valider">
                             </div>
                         </div>
                     </form>
+                    @ViewBag.Error
                     <br /> <br /> <br /> <br />
                 </div>
 

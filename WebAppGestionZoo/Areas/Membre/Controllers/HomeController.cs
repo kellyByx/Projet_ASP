@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WebAppGestionZoo.infra;
 
 namespace WebAppGestionZoo.Areas.Membre.Controllers
 {
@@ -11,14 +12,16 @@ namespace WebAppGestionZoo.Areas.Membre.Controllers
         // GET: Membre/Home
         public ActionResult Index()
         {
+            ViewBag.ZoneMembre = "active";
+            if (!SessionUtils.IsLogged) return RedirectToAction("Login", "Account", new { area = "" }); //renvois pg login si pas connecter.
             return View();
         }
 
-        //    [HttpGet]
-        //    public ActionResult Logout();
-        //    {
-        //      Session.Abandon();
-        //       return RediractToAction("Index","Home");
-        //     }
+        [HttpGet]
+        public ActionResult Logout()
+        {
+            Session.Abandon();
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
