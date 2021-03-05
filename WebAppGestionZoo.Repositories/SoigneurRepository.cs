@@ -32,6 +32,18 @@ namespace WebAppGestionZoo.Repositories
             return base.GetOne(PK, requete);
         }
 
+        public SoigneurEntity GetFromLogin(string login, string password)
+        {
+            string requete = @" EXEC [dbo].[SP_Check_Password] 
+                                                        @login,
+                                                        @password";
+            Dictionary<string, object> parametre = new Dictionary<string, object>();
+            parametre.Add("login", login);
+            parametre.Add("password", password);
+
+            return base.Get(requete, parametre).FirstOrDefault();
+        }
+
         public bool Insert(SoigneurEntity toInsert)
         {
             throw new NotImplementedException();
