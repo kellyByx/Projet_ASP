@@ -8,14 +8,12 @@ namespace WebAppGestionZoo.Models
     public class AnimalModel
     {
         #region Fields 
-        private string _espece,_classe,_famille,_typeAlimentaire;
+        private string _nom, _sexe, _espece,_classe,_famille,_typeAlimentaire;
         private PhotoModel _photoAnimal= new PhotoModel();
+        //id enclos?
         #endregion
 
         #region Properties
-
-
- 
 
         public string Espece
         {
@@ -70,6 +68,9 @@ namespace WebAppGestionZoo.Models
         }
 
         public PhotoModel PhotoAnimal { get => _photoAnimal; set => _photoAnimal = value; }
+        public string Nom { get => _nom; set => _nom = value; }
+        public string Sexe { get => _sexe; set => _sexe = value; }
+        public string Espece1 { get => _espece; set => _espece = value; }
 
         #endregion
     }

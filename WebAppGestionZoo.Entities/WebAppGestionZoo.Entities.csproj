@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalEntity.cs" />
+    <Compile Include="CaracteristiqueEntity.cs" />
     <Compile Include="MessageEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoigneurEntity.cs" />

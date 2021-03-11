@@ -21,7 +21,7 @@ namespace WebAppGestionZoo.Repositories
 
         public List<SoigneurEntity> Get()
         {
-            string requete = "Select * from Soigneur";
+            string requete = "Select top 4 * from Soigneur";
             return base.Get(requete);
         }
 

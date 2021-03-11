@@ -8,3 +8,72 @@
 
 <a href="~/Home/Index" class="btn btn-default">Retour Site principal</a>
 <a href="~/Membre/Home/Logout" class="btn btn-default">Logout</a>
+
+
+
+<div class="banner-header">
+    <div class="container">
+        @*<h2>@ViewBag.Title</h2>*@
+    </div>
+</div>
+<!--header-->
+<div class="content">
+    <div class="contact">
+        <div class="container">
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d90588.04559831446!2d-0.697895!3d44.803707!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5ccbd75122e63618!2sZoo%20de%20Bordeaux%20Pessac!5e0!3m2!1sfr!2sfr!4v1613776066990!5m2!1sfr!2sfr"></iframe>
+            </div>
+            <div class="contact_top">
+                <div class="col-md-8 contact_left">
+                    <h3>  formulaire ajouter un Animal</h3>
+                 
+                    <form method="post">
+                        <div class="form_details">
+                            <label for="cars">Choisiser l'enclos de l'animal</label>
+
+                            <select name="idEnclos id="Endois">
+                                <option value="id1">enclo1</option>
+                                <option value="id2">enclo2</option>
+                                <option value="id3">enclo3</option>
+                                <option value="id4">enclo4</option>
+                            </select>
+                            @*partie Animal:*@
+                            <input type="text" name="Nom" class="text" value="Nom" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nom';}">
+                            <input type="text" name="Sexe" class="text" value="Sexe" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Sexe';}">
+                            <input type="text" name="typeAlimentaire" class="text" value="typeAlimentaire" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'typeAlimentaire';}">
+                            <input type="text" name="Famille" class="text" value="Famille" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Famille';}">
+                            <input type="text" name="Classe" class="text" value="Classe" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Classe';}">
+                            <input type="text" name="Espèce" class="text" value="Espèce" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Espèce';}">
+
+                            @*partie caractéristique:*@
+                            <input type="text" name="DateNaissance" class="text" value="DateNaissance" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'DateNaissance';}">
+                            <input type="text" name="DateDécè" class="text" value="DateDécè" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'DateDécè';}">
+                            <input type="text" name="Poid" class="text" value="Poid" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Poid';}">
+                            <input type="text" name="Taille" class="text" value="Taille" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Taille';}">
+                            <input type="text" name="Photo" class="text" value="Photo" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Photo';}">
+                            
+                            @*+ il faut id animal qui existe pas encore ... ? ou faire en 2 fois et remettre un select animal ? *@
+                            <textarea name="Description" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Description';}">Description</textarea>
+
+                            <div class="clearfix">
+                            </div>
+                            <div class="sub-button">
+                                <input type="submit" value="Valider">
+                            </div>
+                        </div>
+                        <br />
+                        @*@if (ViewBag.SuccessMessage != null)
+                        {
+                            @:<div class="alert alert-success">@ViewBag.SuccessMessage</div>
+                        }
+                        @if (ViewBag.ErrorMessage != null)
+                        {
+                            @:<div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+                        }*@
+                    </form>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>

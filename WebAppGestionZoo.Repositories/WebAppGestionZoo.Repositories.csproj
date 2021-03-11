@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnimalRepository.cs" />
+    <Compile Include="CaracteristiqueRepository.cs" />
     <Compile Include="MessageRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SoigneurRepository.cs" />
