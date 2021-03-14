@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NetFlask.Models
+namespace WebAppGestionZoo.Models
 {
     public class LoginModel
     {

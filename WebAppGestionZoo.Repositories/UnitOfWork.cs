@@ -28,9 +28,7 @@ namespace WebAppGestionZoo.Repositories
         public List<SoigneurModel> GetSoigneur()
         {
             //section des soigneurs
-          
             List< SoigneurEntity> soigneurFromDb = _soigneurRepo.Get();
-
             List<SoigneurModel> soigneurs = new List<SoigneurModel>();
             //Soigneur.Add(new SoigneurModel() { Nom = soigneurFromDb.Nom, Prenom = soigneurFromDb.Prenom, 
             foreach (SoigneurEntity item in soigneurFromDb)
@@ -62,6 +60,29 @@ namespace WebAppGestionZoo.Repositories
             signUp.Photo = sm.PhotoId;
             return _soigneurRepo.Insert(signUp);
 
+        }
+
+        public SoigneurModel UserAuth(LoginModel lm)
+        {
+            SoigneurEntity se = ((SoigneurRepository)_soigneurRepo).GetFromLogin(lm.Login, lm.Password);
+            if (se == null) return null;
+            if (se != null)
+            {
+                return new SoigneurModel()
+                {
+                    Nom = se.Nom,
+                    Prenom = se.Prenom,
+                    Specialisation = se.Specialisation,
+                    PhotoId = se.Photo,
+                    Email=se.Email,
+                    Telephone= se.Telephone
+
+                };
+            }
+            else
+            {
+                return null;
+            }
         }
         #endregion
 

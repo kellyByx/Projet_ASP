@@ -4,7 +4,7 @@
 AS
 	DECLARE @hPassword VARBINARY(32)
 	DECLARE @salt CHAR(8)
-	DECLARE @newPassword VARBINARY(32)
+	DECLARE @newPassword VARBINARY(MAX)
 	SELECT @salt = salt, @hPassword = Password FROM Soigneur WHERE login=@login
 	SELECT @newPassword = dbo.SF_EncryptedPassword (@password, @salt)
 

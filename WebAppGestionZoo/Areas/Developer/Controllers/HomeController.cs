@@ -31,9 +31,7 @@ namespace WebAppGestionZoo.Areas.Developer.Controllers
             [HttpGet]
             public ActionResult NewSoigneur()
             {
-
                   return View();
-
              }
 
             [HttpPost]

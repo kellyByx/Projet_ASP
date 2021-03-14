@@ -1,10 +1,12 @@
-﻿using NetFlask.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using WebAppGestionZoo.infra;
+using WebAppGestionZoo.Models;
+using WebAppGestionZoo.Repositories;
 
 namespace WebAppGestionZoo.Controllers
 {
@@ -33,30 +35,56 @@ namespace WebAppGestionZoo.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(LoginModel lm)
         {
+            UnitOfWork ctx = new UnitOfWork(ConfigurationManager.ConnectionStrings["Cnstr"].ConnectionString);
+           
             if (ModelState.IsValid)
-            {            
-               if(lm.Login!="pandi" && lm.Password!="panda")
-               {
-                    if (lm.Login != "Kelly" && lm.Password != "dev")
-                     {
-                            ViewBag.Error = "Erreur Login/Password";
-                            return View();
-                     }
+            {
+                SoigneurModel pf = ctx.UserAuth(lm);
+                if (pf == null)
+                {
 
-                     else
+                     if (lm.Login != "Kelly" && lm.Password != "dev")
                      {
-                               SessionUtils.IsLogged = true;
-                               return RedirectToAction("Index", "Home", new { area = "Developer" });
-                               //return RedirectToAction("Index", "Home");
+                                 ViewBag.Error = "Erreur Login/Password";
+                                 return View();
                      }
+                    else
+                      {
+                                SessionUtils.IsLogged = true;
+                                return RedirectToAction("Index", "Home", new { area = "Developer" });
+                                //return RedirectToAction("Index", "Home");
+                      }
                 }
-
                 else
                 {
                     SessionUtils.IsLogged = true;
+                    SessionUtils.ConnectedUser = pf;
                     return RedirectToAction("Index", "Home", new { area = "Membre" });
-                    //return RedirectToAction("Index", "Home");
                 }
+                #region AncientLogin
+                //if(lm.Login!="pandi" && lm.Password!="panda")
+                //{
+                //     if (lm.Login != "Kelly" && lm.Password != "dev")
+                //      {
+                //             ViewBag.Error = "Erreur Login/Password";
+                //             return View();
+                //      }
+
+                //      else
+                //      {
+                //                SessionUtils.IsLogged = true;
+                //                return RedirectToAction("Index", "Home", new { area = "Developer" });
+                //                //return RedirectToAction("Index", "Home");
+                //      }
+                // }
+
+                // else
+                // {
+                //     SessionUtils.IsLogged = true;
+                //     return RedirectToAction("Index", "Home", new { area = "Membre" });
+                //     //return RedirectToAction("Index", "Home");
+                // }
+                #endregion
             }
 
             else

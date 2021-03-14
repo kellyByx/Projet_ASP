@@ -5,7 +5,7 @@
     @specialisation  VARCHAR (50),   
     @email          NVARCHAR (256), 
     @login          NVARCHAR (32),  
-    @password       NVARCHAR (32), 
+    @password       NVARCHAR (MAX), 
     @telephone      NVARCHAR (16),  
     @photo          NVARCHAR (250)
        

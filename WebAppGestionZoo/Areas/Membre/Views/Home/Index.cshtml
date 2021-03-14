@@ -1,35 +1,52 @@
-﻿
+﻿@model WebAppGestionZoo.Models.SoigneurModel
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Membre: Soigneur";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Bienvenu Chère soigneur</h2>
-
-<a href="~/Home/Index" class="btn btn-default">Retour Site principal</a>
-<a href="~/Membre/Home/Logout" class="btn btn-default">Logout</a>
-
-
-
 <div class="banner-header">
     <div class="container">
-        @*<h2>@ViewBag.Title</h2>*@
+        <h2>@ViewBag.Title</h2>
     </div>
 </div>
+<div class="container ">
+    <br />
+    <br />
+    <br />
+    <h2>Bienvenu Chère soigneur:</h2>
+    <br />
+    <br />
+    <a href="~/Home/Index" class="btn btn-default">Retour Site principal</a>
+    <a href="~/Membre/Home/Logout" class="btn btn-default">Logout</a>
+</div>
+
+
+
+@*<h2> Votre profil:</h2>
+    <div>Nom:@Model.Nom</div>
+    <div>Prenom:@Model.Prenom</div>
+    <div>Specialisation:@Model.Specialisation</div>
+    <div>Email:@Model.Email</div>
+    <div>Login:@Model.Login</div>
+    <div>Telephone:@Model.Telephone</div>
+    <div>Photo:@Model.PhotoId</div>*@
+
+
+
 <!--header-->
 <div class="content">
     <div class="contact">
         <div class="container">
-           
+
             <div class="contact_top">
                 <div class="col-md-8 contact_left">
                     <h3>  formulaire pour ajouter un Animal</h3>
-                 
+
                     <form method="post">
                         <div class="form_details">
                             <div>
                                 <label for="cars">Choisiser l'enclos de l'animal</label>
-                                <select name="idEnclos id="Endois">
+                                <select name="idEnclos" id="Endois">
                                     <option value="id1">enclo1</option>
                                     <option value="id2">enclo2</option>
                                     <option value="id3">enclo3</option>
@@ -62,13 +79,13 @@
                         </div>
                         <br />
                         @*@if (ViewBag.SuccessMessage != null)
-                        {
-                            @:<div class="alert alert-success">@ViewBag.SuccessMessage</div>
-                        }
-                        @if (ViewBag.ErrorMessage != null)
-                        {
-                            @:<div class="alert alert-danger">@ViewBag.ErrorMessage</div>
-                        }*@
+                            {
+                                @:<div class="alert alert-success">@ViewBag.SuccessMessage</div>
+                            }
+                            @if (ViewBag.ErrorMessage != null)
+                            {
+                                @:<div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+                            }*@
                     </form>
                 </div>
                 <div class="clearfix"> </div>
