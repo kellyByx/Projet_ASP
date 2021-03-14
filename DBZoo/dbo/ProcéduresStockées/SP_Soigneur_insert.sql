@@ -1,11 +1,11 @@
 ﻿CREATE PROCEDURE [dbo].[SP_Soigneur_insert]
     
-   @nom            VARCHAR (50),  
+   @nom             VARCHAR (50),  
     @prenom         VARCHAR (50),   
-   @specialisation VARCHAR (50),   
+    @specialisation  VARCHAR (50),   
     @email          NVARCHAR (256), 
     @login          NVARCHAR (32),  
-    @password       VARBINARY (32), 
+    @password       NVARCHAR (32), 
     @telephone      NVARCHAR (16),  
     @photo          NVARCHAR (250)
        

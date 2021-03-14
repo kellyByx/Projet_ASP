@@ -20,6 +20,7 @@ namespace WebAppGestionZoo.Repositories
             _soigneurRepo = new SoigneurRepository(connectionString);
             _messageRepo = new MessageRepository(connectionString);
             _animalRepo = new AnimalRepository(connectionString);
+
         }
 
 
@@ -45,6 +46,22 @@ namespace WebAppGestionZoo.Repositories
             }
 
             return soigneurs;
+        }
+
+
+        public bool SaveSignUp(SoigneurModel sm)
+        {
+            SoigneurEntity signUp = new SoigneurEntity();
+            signUp.Nom = sm.Nom;
+            signUp.Prenom = sm.Prenom;
+            signUp.Specialisation = sm.Specialisation;
+            signUp.Email = sm.Email;
+            signUp.Login = sm.Login;
+            signUp.Password = sm.Password;
+            signUp.Telephone = sm.Telephone;
+            signUp.Photo = sm.PhotoId;
+            return _soigneurRepo.Insert(signUp);
+
         }
         #endregion
 
@@ -107,7 +124,8 @@ namespace WebAppGestionZoo.Repositories
             return _animalRepo.Insert(ae);
         }
     #endregion
-    #region Caractéristique
+
+        #region Caractéristique
     //// la gallerie:
     //PhotoGallerie = new List<PhotoModel>();
     //PhotoGallerie.Add(new PhotoModel() { Normal= "/images/photos/normal//g1.jpg" });
@@ -136,7 +154,7 @@ namespace WebAppGestionZoo.Repositories
 
     #endregion
 
-    #region Contact
+        #region Contact
 
     public bool SaveContact(ContactModel cm)
         {

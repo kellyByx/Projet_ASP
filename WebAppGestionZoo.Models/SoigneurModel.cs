@@ -8,7 +8,7 @@ namespace WebAppGestionZoo.Models
     public class SoigneurModel
     {
         #region Fields 
-        private string _nom, _prenom, _specialisation,_photoId;
+        private string _nom, _prenom, _specialisation,_photoId, _email, _login, _password,_telephone;
         #endregion
 
         #region Properties
@@ -65,6 +65,11 @@ namespace WebAppGestionZoo.Models
                 _photoId = value;
             }
         }
+
+        public string Email { get => _email; set => _email = value; }
+        public string Login { get => _login; set => _login = value; }
+        public string Password { get => _password; set => _password = value; }
+        public string Telephone { get => _telephone; set => _telephone = value; }
         #endregion
     }
 }

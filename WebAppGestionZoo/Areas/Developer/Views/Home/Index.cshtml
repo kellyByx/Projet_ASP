@@ -1,0 +1,34 @@
+﻿@model WebAppGestionZoo.Models.SoigneurModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="banner-header">
+    <div class="container">
+        <h2>@ViewBag.Title developer</h2>
+    </div>
+</div>
+<!--header-->
+<div class="content">
+    <div class="contact">
+        <div class="container">
+            <h2>Bienvenu dans la zone developer de cette app</h2>
+            <br />
+            @*<a href="~/Home/Index" role="button" class="btn btn-default">Retour Site principal</a>*@
+            <a href="~/Developer/Home/Logout" role="button" class="btn btn-default">Logout</a>
+            <br />
+
+            <div class="contact_top">
+                <div class="col-md-8 contact_left">
+                    <h3>  vos actions disponibles </h3>
+                    <a href="Home/NewSoigneur" role="button" class="btn btn-default">Formulaire ajouter soigneur</a>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+</div>
+

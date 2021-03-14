@@ -37,16 +37,28 @@ namespace WebAppGestionZoo.Controllers
             {            
                if(lm.Login!="pandi" && lm.Password!="panda")
                {
-                    ViewBag.Error = "Erreur Login/Password";
-                    return View();
+                    if (lm.Login != "Kelly" && lm.Password != "dev")
+                     {
+                            ViewBag.Error = "Erreur Login/Password";
+                            return View();
+                     }
+
+                     else
+                     {
+                               SessionUtils.IsLogged = true;
+                               return RedirectToAction("Index", "Home", new { area = "Developer" });
+                               //return RedirectToAction("Index", "Home");
+                     }
                 }
+
                 else
                 {
                     SessionUtils.IsLogged = true;
-                    return RedirectToAction("Index", "Home", new {area="Membre"}); 
+                    return RedirectToAction("Index", "Home", new { area = "Membre" });
                     //return RedirectToAction("Index", "Home");
                 }
             }
+
             else
             {
                 return View();
@@ -56,3 +68,4 @@ namespace WebAppGestionZoo.Controllers
 
     }
 }
+

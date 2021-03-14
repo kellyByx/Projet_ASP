@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GestionDb.Repositories;
 using WebAppGestionZoo.Entities;
 
+
 namespace WebAppGestionZoo.Repositories
 {
     public class SoigneurRepository : BaseRepository<SoigneurEntity>, IConcreteRepository<SoigneurEntity>
@@ -32,6 +33,20 @@ namespace WebAppGestionZoo.Repositories
             return base.GetOne(PK, requete);
         }
 
+        public bool Insert(SoigneurEntity toInsert)
+        {   string requete = @"EXEC [dbo].[SP_Soigneur_Insert] 
+                                                        @nom
+                                                        ,@prenom
+                                                        ,@specialisation
+                                                        ,@email
+                                                        ,@login
+                                                        ,@password
+                                                        ,@telephone
+                                                        ,@photo";
+            return base.Insert(toInsert, requete);
+
+       
+        }
         public SoigneurEntity GetFromLogin(string login, string password)
         {
             string requete = @" EXEC [dbo].[SP_Check_Password] 
@@ -42,11 +57,6 @@ namespace WebAppGestionZoo.Repositories
             parametre.Add("password", password);
 
             return base.Get(requete, parametre).FirstOrDefault();
-        }
-
-        public bool Insert(SoigneurEntity toInsert)
-        {
-            throw new NotImplementedException();
         }
 
         public bool Update(SoigneurEntity toUpdate)
