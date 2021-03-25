@@ -61,8 +61,6 @@
     <Folder Include="dbo\FonctionsScalaires" />
     <Folder Include="dbo\ProcéduresStockées" />
     <Folder Include="dbo\Vues" />
-    <Folder Include="dbo\Views\" />
-    <Folder Include="dbo\Stored Procedures\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\Aliment.sql" />
@@ -83,8 +81,8 @@
     <Build Include="dbo\ProcéduresStockées\SP_Soigneur_insert.sql" />
     <Build Include="dbo\Vues\V_GetRandom.sql" />
     <Build Include="dbo\ProcéduresStockées\SP_Check_Password.sql" />
-    <Build Include="dbo\Views\V_AnimauxCaract.sql" />
-    <Build Include="dbo\Stored Procedures\CreerAnimal.sql" />
+    <Build Include="dbo\Vues\V_AnimauxCaract.sql" />
+    <Build Include="dbo\ProcéduresStockées\CreerAnimal.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="DBZoo.refactorlog" />
